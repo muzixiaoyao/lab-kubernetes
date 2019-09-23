@@ -2,8 +2,8 @@
 
 ## 课程介绍及kubernetes基础
 
-- [课程介绍](https://github.com/99cloud/lab-kubernetes/docs/Course-Introduction.md)
-- [k8s介绍(含架构)](https://github.com/99cloud/lab-kubernetes/docs/K8s-Introduction.md)
+- [课程介绍](https://github.com/xcracker/lab-kubernetes/blob/master/docs/Course-Introduction.md)
+- [k8s介绍(含架构)](https://github.com/xcracker/lab-kubernetes/blob/master/docs/K8s-Introduction.md)
 - [容器操作系统CoreOS以及Docker基础](##)
 - [k8s的群集部署](##)
 

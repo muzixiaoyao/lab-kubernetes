@@ -4,7 +4,7 @@
 
 ## CKA证书
 
-![uP6syD.png](https://s2.ax1x.com/2019/09/23/uP6syD.png)
+![k8scretified.png](..\img\k8scretified.png)
 
 **CKA是Google CNCF云原生基金会和Linux 基金会官方2017年推出的Kubernetes管理员认证计划，也是目前官方唯一的云原生认证，用于证明持有人具备履行Kubernetes管理的知识、技能等相关的能力，认证是这一过程中的关键步骤，顺利通过认证的管理员和企业，证明在开源技术体系中有能力快速建立自己的信誉和价值。**
 
@@ -114,4 +114,4 @@ kvm主机名 | k8sWorkNode2
 
 ## 课程安排
 
-![uiPKK0.png](https://s2.ax1x.com/2019/09/23/uiPKK0.png)
+![timetable.png](..\img\timetable.png)
