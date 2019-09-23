@@ -28,14 +28,16 @@ df -Th
 
 授课时间共4天, 每天上课时间如下:
 
-||
+_|_
 :-: | -
 上午 | 9:30 ~ 11:30
 下午| 1:30~ 4:30
 
 ## 课程环境
 
-**宿主机** ||
++ **宿主机**
+
+_|_
 :-: | -
 主机名 | host
 主机类型 | 物理机
@@ -46,7 +48,9 @@ df -Th
 
 ---
 
-**pxe主机** ||
++ **pxe主机**
+
+_|_
 :-: | -
 kvm主机名 | pxe_server
 主机类型 | kvm虚拟机
@@ -57,7 +61,9 @@ kvm主机名 | pxe_server
 
 ---
 
-**coreos虚拟机1** ||
++ **coreos虚拟机1**
+
+_|_
 :-: | -
 kvm主机名 | core_master
 主机类型 | kvm虚拟机
@@ -68,7 +74,9 @@ kvm主机名 | core_master
 
 ---
 
-**coreos虚拟机2** ||
++ **coreos虚拟机2**
+
+_|_
 :-: | -
 kvm主机名 | core_slave1
 主机类型 | kvm虚拟机
@@ -79,7 +87,9 @@ kvm主机名 | core_slave1
 
 ---
 
-**k8s Master主机** ||
++ **k8s Master主机**
+
+_|_
 :-: | -
 kvm主机名 | k8s_master
 主机类型 | kvm虚拟机
@@ -90,7 +100,9 @@ kvm主机名 | k8s_master
 
 ---
 
-**k8s Work Node1主机** ||
++ **k8s Work Node1主机**
+
+_|_
 :-: | -
 kvm主机名 | k8sWorkNode1
 主机类型 | kvm虚拟机
@@ -101,7 +113,9 @@ kvm主机名 | k8sWorkNode1
 
 ---
 
-**k8s Work Node2主机** ||
++ **k8s Work Node2主机**
+
+_|_
 :-: | -
 kvm主机名 | k8sWorkNode2
 主机类型 | kvm虚拟机
