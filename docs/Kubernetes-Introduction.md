@@ -5,27 +5,27 @@
 
 <!-- code_chunk_output -->
 
-- [kubernetes介绍](#kubernetes介绍)
+- [kubernetes介绍](#kubernetes%e4%bb%8b%e7%bb%8d)
   - [Catalog](#catalog)
-  - [Kubernetes的介绍 (Catalog)](#kubernetes的介绍-catalogcatalog)
-  - [Kubernetes的生态、开源社区](#kubernetes的生态-开源社区)
-    - [生态](#生态)
-    - [社区](#社区)
-    - [周边资源](#周边资源)
-  - [Kubernetes之外的选择 (Catalog)](#kubernetes之外的选择-catalogcatalog)
+  - [Kubernetes的介绍 (Catalog)](#kubernetes%e7%9a%84%e4%bb%8b%e7%bb%8d-catalog)
+  - [Kubernetes的生态、开源社区](#kubernetes%e7%9a%84%e7%94%9f%e6%80%81%e5%bc%80%e6%ba%90%e7%a4%be%e5%8c%ba)
+    - [生态](#%e7%94%9f%e6%80%81)
+    - [社区](#%e7%a4%be%e5%8c%ba)
+    - [周边资源](#%e5%91%a8%e8%be%b9%e8%b5%84%e6%ba%90)
+  - [Kubernetes之外的选择 (Catalog)](#kubernetes%e4%b9%8b%e5%a4%96%e7%9a%84%e9%80%89%e6%8b%a9-catalog)
     - [Docker swam](#docker-swam)
     - [Apache Mesos](#apache-mesos)
     - [Nomad from HashiCorp](#nomad-from-hashicorp)
     - [Rancher](#rancher)
-  - [一个简单的例子 (Catalog)](#一个简单的例子-catalogcatalog)
-    - [描述](#描述)
-    - [环境准备](#环境准备)
-    - [启动MySql服务](#启动mysql服务)
-    - [构建Mysql Kubernetes Service定义文件](#构建mysql-kubernetes-service定义文件)
-    - [启动Tomcat应用](#启动tomcat应用)
-    - [构建Tomcat Kubernetes Service定义文件](#构建tomcat-kubernetes-service定义文件)
-  - [k8s架构 (Catalog)](#k8s架构-catalogcatalog)
-    - [重要概念](#重要概念)
+  - [一个简单的例子 (Catalog)](#%e4%b8%80%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84%e4%be%8b%e5%ad%90-catalog)
+    - [描述](#%e6%8f%8f%e8%bf%b0)
+    - [环境准备](#%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87)
+    - [启动MySql服务](#%e5%90%af%e5%8a%a8mysql%e6%9c%8d%e5%8a%a1)
+    - [构建Mysql Kubernetes Service定义文件](#%e6%9e%84%e5%bb%bamysql-kubernetes-service%e5%ae%9a%e4%b9%89%e6%96%87%e4%bb%b6)
+    - [启动Tomcat应用](#%e5%90%af%e5%8a%a8tomcat%e5%ba%94%e7%94%a8)
+    - [构建Tomcat Kubernetes Service定义文件](#%e6%9e%84%e5%bb%batomcat-kubernetes-service%e5%ae%9a%e4%b9%89%e6%96%87%e4%bb%b6)
+  - [k8s架构 (Catalog)](#k8s%e6%9e%b6%e6%9e%84-catalog)
+    - [重要概念](#%e9%87%8d%e8%a6%81%e6%a6%82%e5%bf%b5)
     - [kube-apiserver](#kube-apiserver)
     - [etcd](#etcd)
     - [kube-scheduler](#kube-scheduler)
@@ -35,8 +35,8 @@
     - [kube-dns](#kube-dns)
     - [dashboard(web-ui)](#dashboardweb-ui)
     - [Replication Controller](#replication-controller)
-    - [API Driven的软件设计](#api-driven的软件设计)
-    - [运行一个应用部署器(Deployment)的过程](#运行一个应用部署器deployment的过程)
+    - [API Driven的软件设计](#api-driven%e7%9a%84%e8%bd%af%e4%bb%b6%e8%ae%be%e8%ae%a1)
+    - [运行一个应用部署器(Deployment)的过程](#%e8%bf%90%e8%a1%8c%e4%b8%80%e4%b8%aa%e5%ba%94%e7%94%a8%e9%83%a8%e7%bd%b2%e5%99%a8deployment%e7%9a%84%e8%bf%87%e7%a8%8b)
 
 <!-- /code_chunk_output -->
 
@@ -560,4 +560,4 @@ k8s是一个API Driven设计模式, 意思就是每个组件尽可能地单独�
 
 结合下图讲解运行一个应用部署器的过程: 假设使用的Replication Controller是Deployment, 用命令`kubectl run nginx --image=nginx:latest --replicas=3`
 
-![](../img/k8s_arch_dep_pro.png)
+![k8s_arch_dep_pro](../img/k8s_arch_dep_pro.png)
