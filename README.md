@@ -9,8 +9,8 @@
 
 ## kubernetes进阶
 
-- [k8s安全](##)
-- [k8s Dashboard](##)
+- [k8s安全](https://github.com/99cloud/lab-kubernetes/blob/master/docs/Kubernetes-Secure.md)
+- [k8s Dashboard](https://github.com/99cloud/lab-kubernetes/blob/master/docs/Kubernetes-Dashboard-Deployment.md)
 - [k8s资源控制](##)
 - [k8s调度](##)
 - [k8s数据存储](##)

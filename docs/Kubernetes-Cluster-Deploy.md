@@ -2,6 +2,24 @@
 
 在这一章教程中，我们将会安装k8s的master节点，并且添加一个工作节点( work node )。  
 
+## Catalog
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [kubernetes cluster 部署](#kubernetes-cluster-%e9%83%a8%e7%bd%b2)
+  - [Catalog](#catalog)
+  - [部署工具kubeadm介绍](#%e9%83%a8%e7%bd%b2%e5%b7%a5%e5%85%b7kubeadm%e4%bb%8b%e7%bb%8d)
+  - [网络组件的选择flannel/calico](#%e7%bd%91%e7%bb%9c%e7%bb%84%e4%bb%b6%e7%9a%84%e9%80%89%e6%8b%a9flannelcalico)
+  - [实验-安装master节点](#%e5%ae%9e%e9%aa%8c-%e5%ae%89%e8%a3%85master%e8%8a%82%e7%82%b9)
+  - [实验-安装work/slave节点](#%e5%ae%9e%e9%aa%8c-%e5%ae%89%e8%a3%85workslave%e8%8a%82%e7%82%b9)
+  - [实验-启动一个简单的Pod](#%e5%ae%9e%e9%aa%8c-%e5%90%af%e5%8a%a8%e4%b8%80%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84pod)
+  - [实验-添加kubectl命令行提示](#%e5%ae%9e%e9%aa%8c-%e6%b7%bb%e5%8a%a0kubectl%e5%91%bd%e4%bb%a4%e8%a1%8c%e6%8f%90%e7%a4%ba)
+  - [实验—启动一个静态Pod](#%e5%ae%9e%e9%aa%8c%e5%90%af%e5%8a%a8%e4%b8%80%e4%b8%aa%e9%9d%99%e6%80%81pod)
+
+<!-- /code_chunk_output -->
+
 ## 部署工具kubeadm介绍
 
 像很多开源工具一样，部署大规模集群的时候，一个一个节点手动部署将会浪费很多的时间，还要面临认为的失误等问题，所以一个好的部署工具室必不可少的， `kubeadm` 是社区里一个非常热门的部署工具项目，也是很多多节点部署 k8s 场景下的第一选择，当然除了kubeadm意外还有非常适合all in one的部署工具 `minikube` 。 课程当中我们不会讲 minikube 的使用，对此工具感兴趣的同学可以自行学习。  
@@ -220,7 +238,7 @@ trystack@k8sMaster ~ $ echo "source <(kubectl completion bash)" >> ~/.bashrc
 trystack@k8sMaster ~ $  sudo -s
 
 # 将静态文件拷贝到/etc/kubernetes/manifests/目录下
-root@k8sMaster ~ $  cp course_lab/lab13-7/static_pod.yaml \ 
+root@k8sMaster ~ $  cp course_lab/lab13-7/static_pod.yaml \  
 root@k8sMaster ~ $  /etc/kubernetes/manifests/
 root@k8sMaster ~ $  exit
 

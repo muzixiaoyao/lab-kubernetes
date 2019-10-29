@@ -5,26 +5,25 @@
 
 <!-- code_chunk_output -->
 
-- [课程介绍](#%e8%af%be%e7%a8%8b%e4%bb%8b%e7%bb%8d)
+- [课程介绍](#课程介绍)
   - [Catalog](#catalog)
-  - [CKA证书 (Catalog)](#cka%e8%af%81%e4%b9%a6-catalog)
-  - [课程约定 (Catalog)](#%e8%af%be%e7%a8%8b%e7%ba%a6%e5%ae%9a-catalog)
-  - [授课时间 (Catalog)](#%e6%8e%88%e8%af%be%e6%97%b6%e9%97%b4-catalog)
-  - [课程环境 (Catalog)](#%e8%af%be%e7%a8%8b%e7%8e%af%e5%a2%83-catalog)
-  - [课程安排 (Catalog)](#%e8%af%be%e7%a8%8b%e5%ae%89%e6%8e%92-catalog)
+  - [CKA证书](#cka证书)
+  - [课程约定](#课程约定)
+  - [授课时间](#授课时间)
+  - [课程环境](#课程环境)
+  - [课程安排](#课程安排)
 
 <!-- /code_chunk_output -->
 
 本课程是针对CNCF推出的基于Kubernetes的管理员认证考试(CKA)，课程主要面向使用容器编排工作岗位的人群和想学习容器编排的学员，我们会围绕Kubernetes的部署和使用来展开课程，并介绍container Linux--coreos的基本使用、Docker容器的基本操作，课程结束后学员可以自行选择参加考试的时间，九州云负责协调。
 
-## CKA证书 ([Catalog](#catalog))
+## CKA证书
 
 ![k8scretified.png](../img/k8scretified.png)
 
 **CKA是Google CNCF云原生基金会和Linux 基金会官方2017年推出的Kubernetes管理员认证计划，也是目前官方唯一的云原生认证，用于证明持有人具备履行Kubernetes管理的知识、技能等相关的能力，认证是这一过程中的关键步骤，顺利通过认证的管理员和企业，证明在开源技术体系中有能力快速建立自己的信誉和价值。**
 
-## 课程约定 ([Catalog](#catalog))
-
+## 课程约定
 
 + 课程中需要学院输入的命令均以代码块的形式告知, 如:
 
@@ -40,7 +39,7 @@ df -Th
   
 + 所有用vnc viewer连接进去的学员，登录密码为trystack，在进入命令行后请用su root，密码为trystack，切换到root账号。
 
-## 授课时间 ([Catalog](#catalog))
+## 授课时间
 
 授课时间共4天, 每天上课时间如下:
 
@@ -49,7 +48,7 @@ _|_
 上午 | 9:30 ~ 11:30
 下午| 1:30~ 4:30
 
-## 课程环境 ([Catalog](#catalog))
+## 课程环境
 
 + **宿主机**
 
@@ -142,6 +141,6 @@ kvm主机名 | k8sWorkNode2
 
 ---
 
-## 课程安排 ([Catalog](#catalog))
+## 课程安排
 
 ![timetable.png](../img/timetable.png)

@@ -10,32 +10,32 @@
 
 - [容器操作系统 CoreOS 和 Docker 基础学习](#%e5%ae%b9%e5%99%a8%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f-coreos-%e5%92%8c-docker-%e5%9f%ba%e7%a1%80%e5%ad%a6%e4%b9%a0)
   - [catalog](#catalog)
-  - [为什么要用CoreOS（catalog）](#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e7%94%a8coreoscatalog)
-  - [实验-PXE安装CoreOS（catalog）](#%e5%ae%9e%e9%aa%8c-pxe%e5%ae%89%e8%a3%85coreoscatalog)
+  - [为什么要用CoreOS](#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e7%94%a8coreos)
+  - [实验-PXE安装CoreOS](#%e5%ae%9e%e9%aa%8c-pxe%e5%ae%89%e8%a3%85coreos)
   - [启动过程](#%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b)
   - [讲解ignition](#%e8%ae%b2%e8%a7%a3ignition)
   - [etcd介绍](#etcd%e4%bb%8b%e7%bb%8d)
-  - [实验-启动容器测试overlay网络是否打通（catalog）](#%e5%ae%9e%e9%aa%8c-%e5%90%af%e5%8a%a8%e5%ae%b9%e5%99%a8%e6%b5%8b%e8%af%95overlay%e7%bd%91%e7%bb%9c%e6%98%af%e5%90%a6%e6%89%93%e9%80%9acatalog)
+  - [实验-启动容器测试overlay网络是否打通](#%e5%ae%9e%e9%aa%8c-%e5%90%af%e5%8a%a8%e5%ae%b9%e5%99%a8%e6%b5%8b%e8%af%95overlay%e7%bd%91%e7%bb%9c%e6%98%af%e5%90%a6%e6%89%93%e9%80%9a)
     - [启动容器](#%e5%90%af%e5%8a%a8%e5%ae%b9%e5%99%a8)
     - [etcdctl工具的简单使用](#etcdctl%e5%b7%a5%e5%85%b7%e7%9a%84%e7%ae%80%e5%8d%95%e4%bd%bf%e7%94%a8)
     - [新的容器引擎rkt介绍](#%e6%96%b0%e7%9a%84%e5%ae%b9%e5%99%a8%e5%bc%95%e6%93%8erkt%e4%bb%8b%e7%bb%8d)
     - [总结](#%e6%80%bb%e7%bb%93)
-  - [docker基础（catalog）](#docker%e5%9f%ba%e7%a1%80catalog)
+  - [docker基础](#docker%e5%9f%ba%e7%a1%80)
     - [docker的介绍](#docker%e7%9a%84%e4%bb%8b%e7%bb%8d)
     - [镜像层](#%e9%95%9c%e5%83%8f%e5%b1%82)
     - [网络模型CNM、CNI](#%e7%bd%91%e7%bb%9c%e6%a8%a1%e5%9e%8bcnmcni)
-  - [实验-docker基本操作（catalog）](#%e5%ae%9e%e9%aa%8c-docker%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9ccatalog)
+  - [实验-docker基本操作](#%e5%ae%9e%e9%aa%8c-docker%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c)
 
 <!-- /code_chunk_output -->
 
-## 为什么要用CoreOS（[catalog](#catalog)）
+## 为什么要用CoreOS
 
 CoreOS 首先在内存的使用量上要比传统的 Linux 操作系统少35%左右，它是为容器量身定做的，系统自带容器引擎 Docker 、 rkt ，它可以在你的裸机环境上运行，也可以在我们的运行环境上运行，它的启动速度特别快，有9个磁盘分区，文件系统分区占2个（A-分区3，B-分区4），每次从其中的一个系统分区中启动，更新的内容会写入另一个系统分区，下次启动运行新的系统分区。它会定时的自动更新防止漏洞，此功能可以被屏蔽
 
 ![coreos-1](../img/coreos-1.png)
 ![coreos-2](../img/coreos-2.png)
 
-## 实验-PXE安装CoreOS（[catalog](#catalog)）
+## 实验-PXE安装CoreOS
 
 实验拓扑图如下， pxe 服务器通过 br1 的地址段 10.0.0.0/24 来提供服务的，两台CoreOS通过br1网桥安装系统，两台 CoreOS 中除了有第一张网卡外，第二张网卡（ eth1 ）是提供容器之间通信的，它连接到主机 br3 网桥。  
 
@@ -126,7 +126,7 @@ etcd是一个开源的分布式的键值对（key value）数据库,他的优点
 > * 磁盘的 IO -- 及诶单上的磁盘IO越高，etcd的集群性能越好。  
 > * 存储位置 -- 不要把不同节点上etcd的pod的存储设备放到同一个存储后端中，比如 (ceph)。  
 
-## 实验-启动容器测试overlay网络是否打通（[catalog](#catalog)）
+## 实验-启动容器测试overlay网络是否打通
 
 > 实验目的：检测两台 coreos 中启动的容器是否可以彼此访问，并简单的了解如何使用etcdctl工具来读取和设置etcd中的数据。
 
@@ -209,7 +209,7 @@ rkt 是一个运行容器的引擎，它的作用和 Docker 基本一样，但�
 
 我们之前都在讨论关于 coreos 的一套生态环境包括 etcd、flannel、rkt 等，你可以在 aws 上看到不少coreos的应用场景，现在 coreos 已经被 red hat 收购了，红帽对 coreos 的发展会起到什么影响，我们现在还不得而知，不过在被收购之前 coreos 已经被很多人和公司所认可。
 
-## docker基础（[catalog](#catalog)）
+## docker基础
 
 在开始讲解k8s之前，有必要将Docker的基础知识跟大家灌输一下，虽然k8s尽可能屏蔽了我们对于底层容器的直接操作，类似于 OpenStack 屏蔽了我们对 hypervisor（ 默认kvm ）的直接操作，但是了解 Docker 有助于我们更好的解决问题。
 
@@ -261,7 +261,7 @@ K8s对容器编排的最终目的是要让容器对外提供服务，要对外�
 
     ![docker-public-mode](../img/docker-public-mode.png)
 
-## 实验-docker基本操作（[catalog](#catalog)）
+## 实验-docker基本操作
 
 接下去会让大家动手做一些常用的命令操作，比如：下载镜像、运行容器、挂载一个volume、为一个镜像打标签、从docker file编译一个镜像等。
 

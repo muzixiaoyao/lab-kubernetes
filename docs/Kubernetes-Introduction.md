@@ -1,30 +1,31 @@
 # kubernetes介绍
 
 ## Catalog
+
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
 - [kubernetes介绍](#kubernetes%e4%bb%8b%e7%bb%8d)
   - [Catalog](#catalog)
-  - [Kubernetes的介绍 (Catalog)](#kubernetes%e7%9a%84%e4%bb%8b%e7%bb%8d-catalog)
+  - [Kubernetes的介绍](#kubernetes%e7%9a%84%e4%bb%8b%e7%bb%8d)
   - [Kubernetes的生态、开源社区](#kubernetes%e7%9a%84%e7%94%9f%e6%80%81%e5%bc%80%e6%ba%90%e7%a4%be%e5%8c%ba)
     - [生态](#%e7%94%9f%e6%80%81)
     - [社区](#%e7%a4%be%e5%8c%ba)
     - [周边资源](#%e5%91%a8%e8%be%b9%e8%b5%84%e6%ba%90)
-  - [Kubernetes之外的选择 (Catalog)](#kubernetes%e4%b9%8b%e5%a4%96%e7%9a%84%e9%80%89%e6%8b%a9-catalog)
+  - [Kubernetes之外的选择](#kubernetes%e4%b9%8b%e5%a4%96%e7%9a%84%e9%80%89%e6%8b%a9)
     - [Docker swam](#docker-swam)
     - [Apache Mesos](#apache-mesos)
     - [Nomad from HashiCorp](#nomad-from-hashicorp)
     - [Rancher](#rancher)
-  - [一个简单的例子 (Catalog)](#%e4%b8%80%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84%e4%be%8b%e5%ad%90-catalog)
+  - [一个简单的例子](#%e4%b8%80%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84%e4%be%8b%e5%ad%90)
     - [描述](#%e6%8f%8f%e8%bf%b0)
     - [环境准备](#%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87)
     - [启动MySql服务](#%e5%90%af%e5%8a%a8mysql%e6%9c%8d%e5%8a%a1)
     - [构建Mysql Kubernetes Service定义文件](#%e6%9e%84%e5%bb%bamysql-kubernetes-service%e5%ae%9a%e4%b9%89%e6%96%87%e4%bb%b6)
     - [启动Tomcat应用](#%e5%90%af%e5%8a%a8tomcat%e5%ba%94%e7%94%a8)
     - [构建Tomcat Kubernetes Service定义文件](#%e6%9e%84%e5%bb%batomcat-kubernetes-service%e5%ae%9a%e4%b9%89%e6%96%87%e4%bb%b6)
-  - [k8s架构 (Catalog)](#k8s%e6%9e%b6%e6%9e%84-catalog)
+  - [k8s架构](#k8s%e6%9e%b6%e6%9e%84)
     - [重要概念](#%e9%87%8d%e8%a6%81%e6%a6%82%e5%bf%b5)
     - [kube-apiserver](#kube-apiserver)
     - [etcd](#etcd)
@@ -40,7 +41,7 @@
 
 <!-- /code_chunk_output -->
 
-## Kubernetes的介绍 ([Catalog](#catalog))
+## Kubernetes的介绍
 
 最早在google内部运行了很长时间, 最终google将borg贡献到开源社区由cncf(Cloud Native Computing Foundation)来托管, 并改名为Kubernetes, Kubernetes在希腊语中是领航员(κνβερνητης)的意思,您可以从[cncf的官方网站](https://www.cncf.io/)的毕业项目(graduated project)下找到Kubernetes. 
 
@@ -96,7 +97,7 @@ Kubernetes 主要对于容器进行编排(orchestration), 随着Kubernetes的发
 - [The New Stack](https://thenewstack.io) -- 专门做云计算新闻的网站, 大家可以在这里看到各种云项目的动态和电子书. 
 - [Slack](https://slack.com) – 一个非常有意思的在线问题的平台. 
 
-## Kubernetes之外的选择 ([Catalog](#catalog))
+## Kubernetes之外的选择
 
 ### Docker swam
 
@@ -122,7 +123,7 @@ Rancher是一个用户体验很好的集群管理工具, 它封装了k8s作为�
 
 ![rancher_arch](../img/rancher_arch.png)
 
-## 一个简单的例子 ([Catalog](#catalog))
+## 一个简单的例子
 
 ### 描述
 
@@ -485,7 +486,7 @@ myweb        10.254.206.12    <nodes>       8080:30001/TCP   48s
 
 ![initk8slab_tomcat](../img/initk8slab_tomcat.png)
 
-## k8s架构 ([Catalog](#catalog))
+## k8s架构
 
 > 在开始k8s试验之前, 为了让大家更好的理解k8s的构成, 有很多重要的概念需要了解.  
 

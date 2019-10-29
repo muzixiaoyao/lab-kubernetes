@@ -2,6 +2,20 @@
 
 本章讲解 k8s 解决方案，比如: Pod 的安全、api-server 访问的机制、pod 之间网络安全的问题等。
 
+## Catalog
+
+<!-- TOC -->
+
+- [Catalog](#catalog)
+- [API的认证过程](#api的认证过程)
+- [Pod的安全](#pod的安全)
+- [Pod的网络安全](#pod的网络安全)
+- [实验-创建普通用户并使用kubectl工具](#实验-创建普通用户并使用kubectl工具)
+- [实验-创建Normal用户并给予超级管理员组](#实验-创建normal用户并给予超级管理员组)
+- [实验-创建Service Account并绑定角色](#实验-创建service-account并绑定角色)
+
+<!-- /TOC -->
+
 ## API的认证过程
 
 之前讨论过k8s的设计思路是 API Driven，组件通信都是经过API来协调的，换句话说所有的https/http请求都要经过 api-server 那么 api-server 如何建立起安全的授权通信机制就变的非常重要了，否则很容易被人攻击。
@@ -94,7 +108,7 @@ root@k8sMaster ~ $  chown -R poweruser:poweruser \
 root@k8sMaster ~ $  /home/poweruser/.kube
 #切换用户到poweruser
 root@k8sMaster ~ $  su poweruser
-poweruser@k8sMaster ~ /home/trystack $  cd 
+poweruser@k8sMaster ~ /home/trystack $  cd  
 #修改/home/poweruser/.kube/config文件
 poweruser@k8sMaster ~ $  vim .kube/config
 #删除下方用虚线框起来的内容
@@ -107,11 +121,11 @@ poweruser@k8sMaster ~ $  vim .kube/config
 ![lab14_4_02](../img/lab14_4_02.png)
 
 ```shell
-#运行kubectl命令,你会发现无法工作,会出现Forbidden的错误 
+#运行kubectl命令,你会发现无法工作,会出现Forbidden的错误  
 #那是正常的，因为我们没有绑定合适的权限给到这个用户
 poweruser@k8sMaster ~ $  kubectl get pods
 #切换到trystack用户
-poweruser@k8sMaster ~ $  exit 
+poweruser@k8sMaster ~ $  exit  
 root@k8sMaster ~ $  exit
 #创建一个role叫做powerrole
 trystack@k8sMaster ~ $  kubectl create -f  \
@@ -122,7 +136,7 @@ trystack@k8sMaster ~ $  /home/trystack/course_lab/lab14-4/power-role-binding.yam
 #检验一下效果
 trystack@k8sMaster ~ $  su poweruser #密码trystack
 #可以运行以下命令，返回结果为：No resources found.
-poweruser@k8sMaster ~ $  kubectl get pods -n ns1 
+poweruser@k8sMaster ~ $  kubectl get pods -n ns1  
 #无法操作没有创建Pod的权限,运行下面的命令会出错
 poweruser@k8sMaster ~ $  kubectl create -f \
 poweruser@k8sMaster ~ $  /home/trystack/course_lab/lab14-4/first_pod.yaml
